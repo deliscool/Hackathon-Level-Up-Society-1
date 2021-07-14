@@ -39,8 +39,6 @@ This is where we will add the elevator pitch for our app.
 Contributions are always welcome!
 
 See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
      
 
 ## License
