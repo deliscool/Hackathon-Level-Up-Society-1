@@ -1,6 +1,7 @@
 const users = [
     {
         name: "Guest",
+        password: "password", // for demo purposes only
         totalScreenTime: 436,
         totalSitesPerDay: 17,
         totalDigitalIds: 9,
@@ -15,6 +16,7 @@ const users = [
         },
     }, {
         name: "Jane",
+        password: "password", // for demo purposes only
         totalScreenTime: 325,
         totalSitesPerDay: 15,
         totalDigitalIds: 12,
@@ -29,6 +31,7 @@ const users = [
         },
     }, {
         name: "Joseph",
+        password: "password", // for demo purposes only
         totalScreenTime: 836,
         totalSitesPerDay: 3,
         totalDigitalIds: 5,
@@ -41,7 +44,24 @@ const users = [
             webBrowsing: 10,
             streaming: 180,
         },
+    },
+    {
+        name: "isLoggedOut",
+        password: "password", // for demo purposes only
+        totalScreenTime: 436,
+        totalSitesPerDay: 17,
+        totalDigitalIds: 9,
+        mostTimeSpent: "StackOverflow",
+        moneySpent: 240,
+        goals: {
+            socialMedia: 45,
+            productivity: 45,
+            gaming: 45,
+            webBrowsing: 45,
+            streaming: 45,
+        },
     }
+
 ]
 
 export default users

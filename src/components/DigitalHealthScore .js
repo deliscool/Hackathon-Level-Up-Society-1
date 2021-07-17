@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { useLocation } from 'react-router'
+import { useLocation } from 'react-router-dom'
 import { UserContext, UserContextProvider } from '../context/UserContext'
 import { DigiHealthContext } from '../context/ContextProvider'
 import DashboarView from './DashboardView'
 
-
-const Goals = props => {
+const DigitalHealthScore = props => {
     const currentPage = useLocation()
     const { currentView, setCurrentView } = useContext( DigiHealthContext )
     const { user, setUser } = useContext( UserContext )
@@ -33,13 +32,13 @@ const Goals = props => {
         } ) )
     }
 
+
     useEffect( () => {
         setCurrentView( currentPage )
 
     }, [] )
-
     return (
-        <DashboarView pagetitle="Goals">
+        <DashboarView pagetitle="Digital Health Score">
             <form className="goalsForm" id="goalsForm">
                 <h3>Adjust Your Goals</h3>
                 <label>Weekly<input type="toggle" />Monthly</label>
@@ -49,8 +48,9 @@ const Goals = props => {
                 <input type="range" name="webBrowsing" value={user.goals.webBrowsing} onChange={handleChange} onChangeEnd={handleChangeEnd} />
                 <input type="range" name="streaming" value={user.goals.streaming} onChange={handleChange} onChangeEnd={handleChangeEnd} />
             </form>
+            <button onClick={() => console.log( currentPage )}>Click</button>
         </DashboarView>
     )
 }
 
-export default Goals
+export default DigitalHealthScore

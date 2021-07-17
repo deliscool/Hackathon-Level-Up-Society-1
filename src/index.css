@@ -8,6 +8,7 @@ body {
 	font-family: "Inter", sans-serif;
 	display: flex;
 	flex-direction: row;
+	background: linear-gradient(180deg, #1d4ed8 -27.02%, #ffffff 149.49%);
 }
 
 .App {
@@ -131,7 +132,7 @@ h3 {
 
 .about {
 	position: absolute;
-	]bottom: 16px;
+	bottom: 16px;
 	left: 23px;
 }
 
@@ -141,10 +142,24 @@ h3 {
 main {
 	width: 100%;
 	height: 100vh;
-	background-color: darkkhaki;
 	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: 2;
+}
+
+.mainContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.goals {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
 }
 
 .goalsForm {

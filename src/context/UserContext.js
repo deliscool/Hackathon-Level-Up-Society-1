@@ -4,7 +4,8 @@ import users from './users'
 const UserContext = createContext()
 const UserContextProvider = props => {
     const initUser = {
-        name: "Guest",
+        name: "isLoggedOut",
+        password: "password", // for demo purposes only
         totalScreenTime: 436,
         totalSitesPerDay: 17,
         totalDigitalIds: 9,
