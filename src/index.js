@@ -13,7 +13,7 @@ ReactDOM.render(
           <UserContextProvider>
               <App />
           </UserContextProvider>
-        <DigiHealthContextProvider>
+        </DigiHealthContextProvider>
      </Router>
   </React.StrictMode>,
   document.getElementById( 'root' )
