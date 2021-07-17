@@ -18,6 +18,7 @@ const SideNavBar = props => {
                 <div className="statsRow"><h5>Most Time Spent: </h5><p>{user.mostTimeSpent}</p></div>
                 <div className="statsRow"><h5>Money Spent: </h5><p>{user.moneySpent}</p></div>
             </div>
+            {props.children}
             <button className="largeButton">GOALS</button>
             <p className="about">About us</p>
         </nav >

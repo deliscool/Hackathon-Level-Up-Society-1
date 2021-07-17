@@ -58,7 +58,7 @@ p {
 }
 
 .digihealth {
-	margin-top: 2vh;
+	margin-top: 3vh;
 	align-self: center;
 	color: white;
 }
@@ -131,7 +131,7 @@ h3 {
 
 .about {
 	position: absolute;
-	bottom: 16px;
+	]bottom: 16px;
 	left: 23px;
 }
 
@@ -141,6 +141,10 @@ h3 {
 main {
 	width: 100%;
 	height: 100vh;
+	background-color: darkkhaki;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 2;
 }
 
 .goalsForm {
