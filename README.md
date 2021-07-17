@@ -45,6 +45,8 @@ See `contributing.md` for ways to get started.
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
+## Design File
+[Figma](https://www.figma.com/file/s15jNGHFiBuC3C0oyaJyb6/Level-Up-Hackathon?node-id=0%3A1)
   
 ## Authors
 
