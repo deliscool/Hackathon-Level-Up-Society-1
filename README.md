@@ -50,8 +50,8 @@ See `contributing.md` for ways to get started.
   
 ## Authors
 
-- [@maradder](https://github.com/maradder)
-- [@deliscool](https://github.com/deliscool)
-- [@yongcho-tx](https://github.com/yongcho-tx/)
-- [Gabe Marchant](https://dribbble.com/gaebmarchant)
+- [@maradder](https://github.com/maradder) - Developer
+- [@deliscool](https://github.com/deliscool) - Developer
+- [@yongcho-tx](https://github.com/yongcho-tx/) - Developer
+- [Gabe Marchant](https://dribbble.com/gaebmarchant) - Designer
   
