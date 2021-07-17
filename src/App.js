@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react"
-import Goals from "./components/Goals"
+import Goals from "./components/Goals/Goals"
 import SideNavBar from "./components/SideNavBar"
 import LoginForm from "./components/LoginForm"
 import RegistrationForm from "./components/RegistrationForm"
@@ -27,6 +27,9 @@ const altButtonStyle = {
   color: "#1d4ed8",
 }
 
+// todo Change register labels to "Signup"
+// adjust font on navbar
+
 function App() {
   const { user, setUser } = useContext( UserContext )
   return (
@@ -34,7 +37,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            {user.name === "isLoggedOut" ? <Redirect to="/login" /> : <Redirect to="/goals" />}</Route>
+            {user.name === "isLoggedOut" ? <Redirect to="/login" /> : <Redirect to="/digitalhealthscore" />}</Route>
           <Route exact path="/registration">
             <RegistrationForm
               altpath={

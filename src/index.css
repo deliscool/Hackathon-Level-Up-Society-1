@@ -153,18 +153,3 @@ main {
 	align-items: center;
 	justify-content: center;
 }
-
-.goals {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background-color: white;
-}
-
-.goalsForm {
-	display: flex;
-	flex-direction: column;
-	align-items: left;
-	width: 30vw;
-}
