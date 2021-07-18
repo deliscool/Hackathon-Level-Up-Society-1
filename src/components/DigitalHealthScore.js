@@ -95,7 +95,7 @@ const DigitalHealthScore = props => {
                 style={{
                     position: "fixed",
                     right: "50px",
-                    top: "15px",
+                    top: "13px",
                     height: "150px",
                     width: "275px",
                     display: "flex",
