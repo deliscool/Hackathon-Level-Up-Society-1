@@ -19,6 +19,7 @@ const users = [
             finance: 60,
             entertainment: 145,
         },
+        coins: 35,
     }, {
         name: "Jane",
         password: "password", // for demo purposes only
@@ -39,6 +40,7 @@ const users = [
             finance: 65,
             entertainment: 35,
         },
+        coins: 35,
     }, {
         name: "Joseph",
         password: "password", // for demo purposes only
@@ -59,6 +61,7 @@ const users = [
             finance: 10,
             entertainment: 10,
         },
+        coins: 35,
     },
     {
         name: "isLoggedOut",
@@ -80,6 +83,7 @@ const users = [
             finance: 45,
             entertainment: 45,
         },
+        coins: 35,
     }
 
 ]

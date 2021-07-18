@@ -1,9 +1,12 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import SwagCard from "./SwagCard"
 import DashboarView from "../DashboardView"
+import { UserContext } from "../../context/UserContext"
 import "../../App.css"
+import coin from "../../img/coin.svg"
 
 const AvatarShop = () => {
+    const { user, setUser } = useContext( UserContext )
     const [swagItems, setSwagItems] = useState( [
         {
             url: `./cowboyhat.png`,
@@ -38,6 +41,40 @@ const AvatarShop = () => {
     return (
         <DashboarView pagetitle="Avatar Shop">
             <div
+                className="wallet"
+                style={{
+                    position: "fixed",
+                    right: "50px",
+                    top: "15px",
+                    height: "130px",
+                    width: "275px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: 'space-around',
+                    padding: "auto 24px",
+                    alignItems: "center",
+                    border: "1px solid #00000030",
+                    boxShadow: "2px 2px 9px #12121210",
+                    borderRadius: "32px",
+                }}>
+                <h3>Coin Wallet</h3>
+                <div style={{
+                    display: "flex",
+                    flexDirection: " row",
+                    justifyContent: 'space-around',
+                    padding: "auto 24px",
+                    alignItems: "center",
+
+                }}>
+                    <img
+                        src={coin}
+                        alt="Coin"
+                        style={{ height: "75px", width: "75px" }}
+                    />
+                    <h3 style={{ fontWeight: 400 }}>${user.coins}</h3>
+                </div>
+            </div>
+            <div
                 style={{
                     height: "100%",
                     width: "100%",
@@ -66,12 +103,13 @@ const AvatarShop = () => {
                             weight: "700",
                             size: "48px",
                             lineHeight: "56px",
-                            width: "454px",
+                            width: "4em auto",
                         }}>
                         More Coming Soon...
                     </h1>
                 </div>
             </div>
+
         </DashboarView>
     )
 }
