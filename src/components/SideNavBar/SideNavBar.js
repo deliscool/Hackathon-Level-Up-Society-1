@@ -143,9 +143,14 @@ const SideNavBar = props => {
                     </button>
                 </Link>
             </div>
-            <Link to="/about">
-                <p className="about">About us</p>
-            </Link>
+            <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
+                <Link to="/about">
+                    <p className="about">About us</p>
+                </Link>
+                <Link to="/login">
+                    <p className="logoutlink">Logout</p>
+                </Link>
+            </div>
         </nav>
     )
 }
