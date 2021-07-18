@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react"
+import React from "react"
 const DashboarView = props => {
     return (
         <div
@@ -21,6 +21,7 @@ const DashboarView = props => {
             <div
                 style={{
                     width: "80vw",
+                    height: "fit-content",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",

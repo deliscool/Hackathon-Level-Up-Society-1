@@ -11,12 +11,17 @@ const UserContextProvider = props => {
         totalDigitalIds: 9,
         mostTimeSpent: "StackOverflow",
         moneySpent: 240,
-        goals: {
-            socialMedia: 45,
+        actuals: {
+            social: 145,
             productivity: 45,
-            gaming: 45,
-            webBrowsing: 45,
-            streaming: 45,
+            finance: 345,
+            entertainment: 45,
+        },
+        goals: {
+            social: 45,
+            productivity: 45,
+            finance: 45,
+            entertainment: 45,
         },
     }
 

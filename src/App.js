@@ -1,12 +1,4 @@
 import React, { useContext } from "react"
-import Goals from "./components/Goals/Goals"
-import SideNavBar from "./components/SideNavBar/SideNavBar"
-import LoginForm from "./components/LoginForm"
-import AvatarStore from "./components/AvatarStore/AvatarStore"
-import About from "./components/About/About"
-import Configure from "./components/Configure/Configure"
-import SignUpForm from "./components/SignUpForm"
-import Modal from "./components/Modal"
 import {
   BrowserRouter as Router,
   Link,
@@ -16,8 +8,15 @@ import {
 } from "react-router-dom"
 import { UserContext } from "./context/UserContext"
 import { DigiHealthContext } from "./context/ContextProvider"
+import SideNavBar from "./components/SideNavBar/SideNavBar"
+import Goals from "./components/Goals/Goals"
+import AvatarShop from "./components/AvatarShop/AvatarShop"
+import LoginForm from "./components/Forms/LoginForm"
+import SignUpForm from "./components/Forms/SignUpForm"
+import Configure from "./components/Configure/Configure"
+import Modal from "./components/Modal/Modal"
+import About from "./components/About/About"
 import DigitalHealthScore from "./components/DigitalHealthScore"
-import AvatarShop from "./components/AvatarShop"
 
 const altButtonStyle = {
   outline: "1px solid '#1d4ed8",
@@ -82,7 +81,7 @@ function App( props ) {
             } />
             <About />
           </Route>
-          <Route exact path="/avatarstore">
+          <Route exact path="/avatarshop">
             <SideNavBar altpath={
               <Link to="/login">
                 <button style={altButtonStyle}>
@@ -90,7 +89,7 @@ function App( props ) {
                 </button>
               </Link>
             } />
-            <AvatarStore />
+            <AvatarShop />
           </Route>
           <Route exact path="/goals">
             <SideNavBar altpath={

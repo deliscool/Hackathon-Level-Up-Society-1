@@ -7,12 +7,17 @@ const users = [
         totalDigitalIds: 9,
         mostTimeSpent: "StackOverflow",
         moneySpent: "Amazon",
+        actuals: {
+            social: 445,
+            productivity: 65,
+            finance: 45,
+            entertainment: 445,
+        },
         goals: {
-            socialMedia: 45,
+            social: 45,
             productivity: 45,
-            gaming: 45,
-            webBrowsing: 45,
-            streaming: 45,
+            finance: 45,
+            entertainment: 45,
         },
     }, {
         name: "Jane",
@@ -22,12 +27,17 @@ const users = [
         totalDigitalIds: 12,
         mostTimeSpent: "Instagram",
         moneySpent: "ASOS",
+        actuals: {
+            social: 145,
+            productivity: 45,
+            finance: 345,
+            entertainment: 45,
+        },
         goals: {
-            socialMedia: 35,
+            social: 35,
             productivity: 55,
-            gaming: 65,
-            webBrowsing: 35,
-            streaming: 55,
+            finance: 65,
+            entertainment: 35,
         },
     }, {
         name: "Joseph",
@@ -37,12 +47,17 @@ const users = [
         totalDigitalIds: 5,
         mostTimeSpent: "Netflix",
         moneySpent: "Currys",
+        actuals: {
+            social: 445,
+            productivity: 45,
+            finance: 65,
+            entertainment: 45,
+        },
         goals: {
-            socialMedia: 10,
+            social: 10,
             productivity: 10,
-            gaming: 10,
-            webBrowsing: 10,
-            streaming: 180,
+            finance: 10,
+            entertainment: 10,
         },
     },
     {
@@ -53,12 +68,17 @@ const users = [
         totalDigitalIds: 9,
         mostTimeSpent: "StackOverflow",
         moneySpent: "eBay",
-        goals: {
-            socialMedia: 45,
+        actuals: {
+            social: 90,
             productivity: 45,
-            gaming: 45,
-            webBrowsing: 45,
-            streaming: 45,
+            finance: 65,
+            entertainment: 45,
+        },
+        goals: {
+            social: 45,
+            productivity: 45,
+            finance: 45,
+            entertainment: 45,
         },
     }
 
