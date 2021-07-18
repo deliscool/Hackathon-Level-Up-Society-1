@@ -37,6 +37,17 @@ function App( props ) {
     <div className="App">
       <Router history={history}>
         <Switch>
+          <Route exact path="/login">
+            <LoginForm
+              altpath={
+                <Link to="/signup">
+                  <button style={altButtonStyle}>
+                    Sign Up
+                  </button>
+                </Link>
+              }
+            />
+          </Route>
           <Route exact path="/">
             {user.name === "isLoggedOut" ? <Redirect to="/login" /> : <Redirect to="/digitalhealthscore" />}</Route>
           <Route exact path="/signup">
@@ -45,17 +56,6 @@ function App( props ) {
                 <Link to="/login">
                   <button style={altButtonStyle}>
                     Login
-                  </button>
-                </Link>
-              }
-            />
-          </Route>
-          <Route exact path="/login">
-            <LoginForm
-              altpath={
-                <Link to="/signup">
-                  <button style={altButtonStyle}>
-                    Sign Up
                   </button>
                 </Link>
               }

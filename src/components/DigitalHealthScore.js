@@ -80,6 +80,7 @@ const DigitalHealthScore = props => {
                 />
 
             </div>
+            <h5>Security Score</h5>
             <div className="securityHealthBar" />
         </DashboarView>
     )
