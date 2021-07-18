@@ -15,10 +15,15 @@ function DigiHealthContextProvider( props ) {
         password: ""
     } )
 
+    const [openModal, setOpenModal] = useState( true )
+
     const handleChange = e => {
         const { name, value } = e.target
         setLogin( { ...login, [name]: value } )
         setSignUp( { ...signUp, [name]: value } )
+    }
+    const closeModal = () => {
+        setOpenModal(false)
     }
 
     const handleSubmit = e => {
@@ -26,7 +31,7 @@ function DigiHealthContextProvider( props ) {
 
     }
     return (
-        <DigiHealthContext.Provider value={{ login, signUp, handleSubmit, handleChange, currentView, setCurrentView }}>
+        <DigiHealthContext.Provider value={{ login, signUp, openModal, handleSubmit, closeModal, handleChange, currentView, setCurrentView }}>
             {props.children}
         </DigiHealthContext.Provider>
     )
