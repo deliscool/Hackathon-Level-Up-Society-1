@@ -25,6 +25,10 @@
 .label-names {
 	text-transform: uppercase;
 	margin-bottom: 5px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .form > input {

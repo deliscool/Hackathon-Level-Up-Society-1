@@ -19,17 +19,21 @@ function LoginForm( props ) {
                     <div className="form-container">
                         <form className="form" onSubmit={( handleSubmit )}>
                             <h2>Login</h2>
-                            <label className="label-names" for="username">Username {errAuth ? <p>Username or password is incorrect</p> : ""}</label>
+                            <label className="label-names" for="username">Username</label>
                             <input
                                 type="text"
                                 name="username"
                                 value={login.username}
                                 placeholder={"Input username"}
                                 onChange={handleChange}
+                                style={{
+                                    border: errAuth ? "2px solid #FF5B5B" : "auto"
+                                }}
                             />
-                            <label className="label-names" for="password">Password {errAuth ? <p>Username or password is incorrect</p> : ""}
+                            <label className="label-names" for="password">Password
                                 <span
                                     style={{
+                                        justifySelf: 'flex-end',
                                         marginLeft: "16px",
                                         color: "green",
                                         textAlign: "right",
@@ -46,6 +50,9 @@ function LoginForm( props ) {
                                 value={login.password}
                                 placeholder="Input password"
                                 onChange={handleChange}
+                                style={{
+                                    border: errAuth ? "2px solid #FF5B5B" : "auto"
+                                }}
                             />
                             <label for="remember password">
                                 <input

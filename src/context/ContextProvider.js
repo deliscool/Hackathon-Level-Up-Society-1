@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react"
-// import { useHistory, useLocation, Redirect } from "react-router-dom"
+import { useHistory, useLocation, Redirect } from "react-router-dom"
 import { createBrowserHistory } from "history"
 import users from "./users"
 import { UserContext } from "./UserContext"
@@ -42,8 +42,7 @@ function DigiHealthContextProvider( props ) {
         )
         console.log( result )
         result.password === login.password
-            ? setUser( result ) &&
-            history.push( '/goals', { from: 'login' } )
+            ? setUser( result )
             : setErrAuth( true )
     }
     return (

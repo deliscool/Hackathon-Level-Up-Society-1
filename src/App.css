@@ -79,19 +79,21 @@
 .securityHealthBar {
 	min-height: 25px;
 	min-width: 60vw;
-	background-color: aqua;
+	background-color: #0066cc;
 	border-radius: 8px;
 }
 
 .securityHealthBar::before {
-	content: "Hep";
+	content: "81";
 	min-height: 35px;
 	min-width: 20px;
-	background-color: orange;
+	background-color: #f4c145;
 	z-index: 5;
+	padding: 8px 8px 16px 8px;
+	border-radius: 8px;
 	position: relative;
 	top: -25px;
-	left: 1%;
+	left: 81%;
 }
 
 .rangeSliders > input {
