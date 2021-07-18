@@ -130,7 +130,7 @@ const Goals = props => {
                     </label>
                 </form>
                 <img
-                    style={{ width: "600px", height: "600px", position: "relative", top: "309px", right: "54px", zIndex: "0" }}
+                    style={{ width: "400px", height: "400px", position: "relative", top: "275px", right: "175px", zIndex: "0" }}
                     src={target}
                     alt="Target"
                 />
