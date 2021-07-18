@@ -43,7 +43,8 @@ const DigitalHealthScore = props => {
         <DashboarView pagetitle="Digital Health Score">
             <div className="digiHealthScorePage">
                 <div
-                    className="chart-container" id="actualChart">
+                    className="chart-container pf-u-font-size-3xl
+                    " id="actualChart">
                     <ChartDonut
                         data={[
                             { x: "Social", y: user.actuals.social },
@@ -57,6 +58,7 @@ const DigitalHealthScore = props => {
                         themeColor={ChartThemeColor.multiOrdered}
                         legendPosition="right"
                         legendOrientation="vertical"
+
                         height={500}
                         width={600}
                         radius={205}
@@ -88,7 +90,7 @@ const DigitalHealthScore = props => {
                 />
 
             </div>
-            <h5>Security Score</h5>
+            <h3>Security Score</h3>
             <div className="securityHealthBar" />
         </DashboarView>
     )

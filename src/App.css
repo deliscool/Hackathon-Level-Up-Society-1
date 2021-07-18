@@ -57,12 +57,19 @@
 }
 
 .digiHealthScorePage {
-	height: 80vh;
+	height: 75vh;
 	width: 50vw;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.digiHealthScorePage h3 {
+	font-size: 40px;
+	line-height: 40px;
+	font-weight: 600;
+	margin-bottom: 16px;
 }
 
 #digiHealthScoreAvatar {
@@ -76,24 +83,70 @@
 	align-items: center;
 }
 
+@media screen and (min-width: 890px) and (max-width: 1089px) {
+	#digiHealthScoreAvatar {
+		height: 175px;
+		width: 175px;
+		top: 19vh;
+	}
+}
+
+@media screen and (max-width: 890px) {
+	#digiHealthScoreAvatar {
+		height: 150px;
+		width: 150px;
+		top: 21vh;
+	}
+
+	.digiHealthScorePage h3 {
+		font-size: 32px;
+		line-height: 40px;
+		font-weight: 500;
+		margin-bottom: 16px;
+	}
+	.securityHealthBar {
+		min-height: 25px;
+		min-width: 60vw;
+		margin-top: 16px;
+		background-color: #0066cc;
+		border-radius: 8px;
+	}
+
+	.securityHealthBar::before {
+		content: "81";
+		font-size: 32px;
+		height: 40px;
+		min-width: 20px;
+		background-color: #f4c145;
+		z-index: 5;
+		padding: 8px 8px 16px 8px;
+		border-radius: 8px;
+		position: relative;
+		top: -35px;
+		left: 60%;
+	}
+}
+
 .securityHealthBar {
 	min-height: 25px;
 	min-width: 60vw;
+	margin-top: 16px;
 	background-color: #0066cc;
 	border-radius: 8px;
 }
 
 .securityHealthBar::before {
 	content: "81";
-	min-height: 35px;
+	font-size: 32px;
+	height: 40px;
 	min-width: 20px;
 	background-color: #f4c145;
 	z-index: 5;
 	padding: 8px 8px 16px 8px;
 	border-radius: 8px;
 	position: relative;
-	top: -25px;
-	left: 81%;
+	top: -35px;
+	left: 42vw;
 }
 
 .rangeSliders > input {
@@ -120,7 +173,7 @@
 /* Shorter screens */
 @media screen and (max-height: 818px) {
 	.digiHealthScorePage {
-		height: 80vh;
+		height: 70vh;
 		width: 50vw;
 		position: relative;
 		display: flex;
