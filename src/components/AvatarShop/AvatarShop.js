@@ -42,7 +42,7 @@ const AvatarShop = () => {
                     height: "100%",
                     width: "100%",
                     display: "flex",
-                    flexDirection: "row",
+                    flexDirection: "column",
                     flexWrap: "wrap",
                     padding: "64px",
                 }}>
