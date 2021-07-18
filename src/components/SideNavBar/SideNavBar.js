@@ -20,6 +20,7 @@ const SideNavBar = props => {
             </div>
             <div className="statsContainer">
                 <Tippy
+                    arrow={false}
                     content={
                         <span>
                             Total Screen Time: How many hours spent online
@@ -35,6 +36,7 @@ const SideNavBar = props => {
                     </div>
                 </Tippy>
                 <Tippy
+                    arrow={false}
                     content={
                         <span>
                             Total Sites Per Day: How many sites you vistit per
@@ -52,6 +54,7 @@ const SideNavBar = props => {
                     </div>
                 </Tippy>
                 <Tippy
+                    arrow={false}
                     content={
                         <span>
                             Total Digital IDs: How many logins you have online
@@ -68,6 +71,7 @@ const SideNavBar = props => {
                     </div>
                 </Tippy>
                 <Tippy
+                    arrow={false}
                     content={
                         <span>
                             Most Time Spent: Which site you spend the most time
@@ -85,6 +89,7 @@ const SideNavBar = props => {
                     </div>
                 </Tippy>
                 <Tippy
+                    arrow={false}
                     content={
                         <span>
                             Money Spent: Which site you spend the most money on
