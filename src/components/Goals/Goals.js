@@ -10,12 +10,7 @@ const Goals = props => {
     const { setCurrentView } = useContext( DigiHealthContext )
     // const [weekMonth, setWeekMonth] = useState( false )
     const { user, setUser } = useContext( UserContext )
-    const [formGoals, setFormGoals] = useState( {
-        social: 45,
-        productivity: 45,
-        finance: 45,
-        entertainment: 45,
-    } )
+    const [formGoals, setFormGoals] = useState( user.goals )
 
     const handleChange = e => {
         const { name, value } = e.target

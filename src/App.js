@@ -29,7 +29,7 @@ const altButtonStyle = {
 
 
 function App( props ) {
-  const { user, setUser } = useContext( UserContext )
+  const { user } = useContext( UserContext )
   const { openModal, setOpenModal, history } = useContext( DigiHealthContext )
   return (
 
