@@ -49,7 +49,9 @@ function App( props ) {
             />
           </Route>
           <Route exact path="/">
-            {user.name === "isLoggedOut" ? <Redirect to="/login" /> : <Redirect to="/digitalhealthscore" />}</Route>
+            <SignUpForm />
+            {/* {user.name === "isLoggedOut" ? <Redirect to="/login" /> : <Redirect to="/digitalhealthscore" />}</Route> */}
+          </Route>
           <Route exact path="/signup">
             <SignUpForm
               altpath={
