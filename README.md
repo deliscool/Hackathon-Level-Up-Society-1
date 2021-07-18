@@ -2,9 +2,11 @@
 Repo for the 48-hour hackathon, giving you the chance to help level-up society through gamification
 
 ## What is this App? Who is it for?
+A webapp mutli tool for the end user to optimize their digital well being.
 
-This is where we will add the elevator pitch for our app.
 ## Mind-Map
+Aggregate all user logins and combine with screen time to show user of what their current digital behavior looks like and show a visualiztion of their digital well being.
+
 ### Front-End
 - Actions
     *    User action one (signup)
