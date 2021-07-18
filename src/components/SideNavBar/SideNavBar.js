@@ -10,17 +10,6 @@ const SideNavBar = props => {
     const { currentView } = useContext( DigiHealthContext )
     const { user } = useContext( UserContext )
 
-    // const handleClick = e => {
-    //     const button = e.target
-    //     const name = button.getAttribute( "id" )
-    //     const selectedUser = users.filter(
-    //         person =>
-    //             person.name.toLocaleLowerCase() === name.toLocaleLowerCase()
-    //     )
-    //     setUser( ...selectedUser )
-    //     console.log( name )
-    // }
-
     return (
         <nav className="sideNavBar">
             <h1 className="digihealth">DigiHealth</h1>
