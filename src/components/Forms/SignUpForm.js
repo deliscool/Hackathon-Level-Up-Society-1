@@ -20,7 +20,7 @@ function SignUpForm( props ) {
                             console.log( "data was submitted" )
                             handleSubmit( e )
                         }}>
-                            <h2>Sign Up</h2>
+                            <h3 style={{ marginBottom: "8px" }}>Sign Up</h3>
                             <label className="label-names" for="username">Name</label>
                             <input
                                 type="text"
@@ -73,14 +73,16 @@ function SignUpForm( props ) {
                                 <input
                                     type="checkbox"
                                     name="remember password"
+                                    style={{ marginRight: "8px" }}
+
                                 />
                                 I agree to the terms of service.
                             </label>
-                            <div className="btn-container">
-                                <button type="submit">Sign Up</button>
+                            <div className="btn-container" style={{ marginTop: "16px" }}>
+                                <button style={{ color: "white" }} type="submit">Sign Up</button>
                                 {props.altpath}
                             </div>
-                            <Link to="/digitalhealthscore"><p className="guest-login">Continue as guest</p></Link>
+                            <Link to="/digitalhealthscore" style={{ marginTop: "16px" }}><p className="guest-login">Continue as guest</p></Link>
                         </form>
                     </div>
                 </div>

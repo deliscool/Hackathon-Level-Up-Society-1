@@ -18,7 +18,7 @@ function LoginForm( props ) {
                     <Header />
                     <div className="form-container">
                         <form className="form" onSubmit={( handleSubmit )}>
-                            <h2>Login</h2>
+                            <h3 style={{ marginBottom: "8px" }}>Login</h3>
                             <label className="label-names" for="username">Username</label>
                             <input
                                 type="text"
@@ -57,18 +57,17 @@ function LoginForm( props ) {
                             <label for="remember password">
                                 <input
                                     type="checkbox"
-                                    name="remember password"
+                                    name="remember password" style={{ marginRight: "8px" }}
                                 />Remember Password
                             </label>
-                            <div className="btn-container">
-                                <button type="submit">Login</button>
+                            <div className="btn-container" style={{ margin: "16px" }}>
+                                <button style={{ color: "white" }} type="submit">Login</button>
                                 {props.altpath}
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            {props.children}
         </main>
     )
 }

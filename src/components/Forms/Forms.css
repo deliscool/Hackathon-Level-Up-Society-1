@@ -4,7 +4,7 @@
 	justify-content: center;
 	flex-direction: column;
 	position: absolute;
-	top: 15vh;
+	top: 4vh;
 	left: auto;
 }
 
@@ -23,7 +23,6 @@
 }
 
 .label-names {
-	text-transform: uppercase;
 	margin-bottom: 5px;
 	width: 100%;
 	display: flex;
