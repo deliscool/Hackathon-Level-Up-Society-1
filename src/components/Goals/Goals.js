@@ -3,6 +3,7 @@ import { useLocation } from "react-router"
 import { UserContext } from "../../context/UserContext"
 import { DigiHealthContext } from "../../context/ContextProvider"
 import DashboarView from "../DashboardView"
+import target from "../../img/target.svg"
 import "./Goals.css"
 
 const Goals = props => {
@@ -129,8 +130,9 @@ const Goals = props => {
                     </label>
                 </form>
                 <img
-                    src="https://thedailyaztec.com/wp-content/uploads/2020/04/Untitled_Artwork-1-675x900.png"
-                    alt="Screen Time"
+                    style={{ width: "600px", height: "600px", position: "relative", top: "309px", right: "54px", zIndex: "0" }}
+                    src={target}
+                    alt="Target"
                 />
             </div>
         </DashboarView>
