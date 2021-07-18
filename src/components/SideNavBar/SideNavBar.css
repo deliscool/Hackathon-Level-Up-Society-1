@@ -9,6 +9,14 @@
 	background: linear-gradient(180deg, #1d4ed8 -27.02%, #ffffff 149.49%);
 }
 
+.sideNavBar i {
+	font-size: 32px;
+	margin-left: 18px;
+	width: 36px;
+	color: #ffffff;
+	text-align: center;
+}
+
 .digihealth {
 	margin-top: 3vh;
 	align-self: center;
@@ -22,22 +30,22 @@
 	justify-content: center;
 	height: 10vh;
 	width: 100%;
-	margin-top: 7.5vh;
+	margin: 7.5vh 0 0 40px;
 }
 
-.greetingBox h4,
-h3 {
-	margin: 0 0 0 24px;
-}
+/* .greetingBox h4, */
+/* h3 { */
+/* margin: 0 0 0 24px; */
+/* } */
 
 .greetingBox h4 {
-	font-size: 20px;
+	font-size: 24px;
 	line-height: 28px;
 	font-weight: 300;
 }
 
 .greetingBox h3 {
-	font-size: 34px;
+	font-size: 40px;
 	line-height: 40px;
 	font-weight: 600;
 }
@@ -55,13 +63,13 @@ h3 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 80%;
-	padding: auto 16px;
+	width: 70%;
+	padding: auto;
 	margin: 8px auto 8px 24px;
 }
 
 .statsRow h5 {
-	font-size: 18px;
+	font-size: 24px;
 }
 
 .largeButton {
@@ -100,7 +108,7 @@ h3 {
 	bottom: 17vh;
 }
 
-#avatarStoreButton {
+#avatarShopButton {
 	background-color: #f7ce46;
 	color: #000000;
 	text-decoration: none;

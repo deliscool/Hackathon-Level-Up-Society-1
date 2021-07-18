@@ -1,26 +1,25 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useContext } from "react"
 import { Link } from "react-router-dom"
 import { UserContext } from "../../context/UserContext"
 import { DigiHealthContext } from "../../context/ContextProvider"
-import users from "../../context/users"
 import "./SideNavBar.css"
 import Tippy from "@tippyjs/react"
 import "tippy.js/dist/tippy.css" // optional
 
 const SideNavBar = props => {
-    const { currentView, setCurrentView } = useContext( DigiHealthContext )
-    const { user, setUser } = useContext( UserContext )
+    const { currentView } = useContext( DigiHealthContext )
+    const { user } = useContext( UserContext )
 
-    const handleClick = e => {
-        const button = e.target
-        const name = button.getAttribute( "id" )
-        const selectedUser = users.filter(
-            person =>
-                person.name.toLocaleLowerCase() === name.toLocaleLowerCase()
-        )
-        setUser( ...selectedUser )
-        console.log( name )
-    }
+    // const handleClick = e => {
+    //     const button = e.target
+    //     const name = button.getAttribute( "id" )
+    //     const selectedUser = users.filter(
+    //         person =>
+    //             person.name.toLocaleLowerCase() === name.toLocaleLowerCase()
+    //     )
+    //     setUser( ...selectedUser )
+    //     console.log( name )
+    // }
 
     return (
         <nav className="sideNavBar">
@@ -42,8 +41,8 @@ const SideNavBar = props => {
                     delay="205"
                     animation="scale-subtle">
                     <div className="statsRow">
-                        <p>Total Screen Time: </p>
-                        <h5>{user.totalScreenTime}</h5>
+                        <i class="far fa-clock"></i>
+                        <h5>{user.totalScreenTime} hrs.</h5>
                     </div>
                 </Tippy>
                 <Tippy
@@ -59,8 +58,8 @@ const SideNavBar = props => {
                     delay="205"
                     animation="scale-subtle">
                     <div className="statsRow">
-                        <p>Total Sites Per Day: </p>
-                        <h5>{user.totalSitesPerDay}</h5>
+                        <i class="far fa-browser"></i>
+                        <h5>{user.totalSitesPerDay} Sites</h5>
                     </div>
                 </Tippy>
                 <Tippy
@@ -75,8 +74,8 @@ const SideNavBar = props => {
                     delay="205"
                     animation="scale-subtle">
                     <div className="statsRow">
-                        <p>Total Digital IDs: </p>
-                        <h5>{user.totalDigitalIds}</h5>
+                        <i class="far fa-user"></i>
+                        <h5>{user.totalDigitalIds} IDs</h5>
                     </div>
                 </Tippy>
                 <Tippy
@@ -92,7 +91,7 @@ const SideNavBar = props => {
                     delay="205"
                     animation="scale-subtle">
                     <div className="statsRow">
-                        <p>Most Time Spent: </p>
+                        <i class="far fa-bookmark"></i>
                         <h5>{user.mostTimeSpent}</h5>
                     </div>
                 </Tippy>
@@ -108,7 +107,7 @@ const SideNavBar = props => {
                     delay="205"
                     animation="scale-subtle">
                     <div className="statsRow">
-                        <p>Money Spent: </p>
+                        <i class="far fa-shopping-cart"></i>
                         <h5>{user.moneySpent}</h5>{" "}
                     </div>
                 </Tippy>
@@ -133,14 +132,14 @@ const SideNavBar = props => {
                 </Link>
                 <Link
                     to={
-                        currentView.pathname === "/avatarstore"
+                        currentView.pathname === "/avatarshop"
                             ? "/digitalhealthscore"
-                            : "/avatarstore"
+                            : "/avatarshop"
                     }>
-                    <button className="smallButton" id="avatarStoreButton">
-                        {currentView.pathname === "/avatarstore"
+                    <button className="smallButton" id="avatarShopButton">
+                        {currentView.pathname === "/avatarshop"
                             ? "Back to Dashboard"
-                            : "Avatar Store"}
+                            : "Avatar Shop"}
                     </button>
                 </Link>
             </div>
