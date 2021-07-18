@@ -3,7 +3,7 @@ import { DigiHealthContext } from "../../context/ContextProvider"
 import "../../App.css"
 
 const modalStyle = {
-  width: "100vw",
+  width: "70vw",
   height: "100vh",
   background: "#ffffff",
   display: "flex",
@@ -11,7 +11,8 @@ const modalStyle = {
   flexDirection: "column",
   alignItems: "center",
   margin: "0 auto",
-  position: "relative"
+  position: "relative",
+  left: "30%",
 }
 const closeModalStyle = {
   position: "absolute",
@@ -27,7 +28,7 @@ function Modal( props ) {
   const { closeModal } = useContext( DigiHealthContext )
   return (
 
-    <div className="modalBackground" style={{ width: "100%", height: "100vh" }}>
+    <div className="modalBackground" style={{ maxWidth: "70vw", height: "90vh" }}>
       <div className="modalContainer" style={modalStyle}>
         <button style={closeModalStyle} onClick={() => {
           return console.log( "button clicked" )

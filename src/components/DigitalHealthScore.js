@@ -16,9 +16,10 @@ import {
 const DigitalHealthScore = props => {
     const feels = [perfect, worried, mummy, zombie]
     const currentPage = useLocation()
-    const [currentMood] = useState( 0 )
+    const [currentMood, setCurrentMood] = useState( 0 )
     const { setCurrentView } = useContext( DigiHealthContext )
-    const { user, setUser } = useContext( UserContext )
+    const { user, setUser, checkUserGoals2Actual } = useContext( UserContext )
+    const [currentRatio, setCurrentRatio] = useState( null )
     const [formGoals, setFormGoals] = useState( {
         social: 45,
         productivity: 45,
@@ -27,9 +28,16 @@ const DigitalHealthScore = props => {
     } )
 
     useEffect( () => {
+        setCurrentRatio( checkUserGoals2Actual() )
         setCurrentView( currentPage )
     }, [] )
 
+    useEffect( () => {
+        currentRatio >= -53 ? setCurrentMood( 0 ) :
+            currentRatio < -53 && currentRatio >= -83 ? setCurrentMood( 1 ) :
+                currentRatio < -83 && currentRatio >= -100 ? setCurrentMood( 2 ) :
+                    setCurrentMood( 3 )
+    }, [currentRatio] )
 
     return (
         <DashboarView pagetitle="Digital Health Score">

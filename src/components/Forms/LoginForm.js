@@ -68,6 +68,7 @@ function LoginForm( props ) {
                     </div>
                 </div>
             </div>
+            {props.children}
         </main>
     )
 }
