@@ -1,29 +1,23 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useContext } from "react"
 import Goals from "./components/Goals/Goals"
 import SideNavBar from "./components/SideNavBar/SideNavBar"
 import LoginForm from "./components/LoginForm"
-import RegistrationForm from "./components/RegistrationForm"
 import AvatarStore from "./components/AvatarStore/AvatarStore"
 import About from "./components/About/About"
 import Configure from "./components/Configure/Configure"
-
+import SignUpForm from "./components/SignUpForm"
+import Modal from "./components/Modal"
 import {
   BrowserRouter as Router,
   Link,
   Switch,
   Route,
   Redirect,
-  useLocation,
 } from "react-router-dom"
 import { UserContext } from "./context/UserContext"
-import DigitalHealthScore from "./components/DigitalHealthScore "
 import { DigiHealthContext } from "./context/ContextProvider"
-
-const linkStyle = {
-  textDecoration: "none",
-  color: "white",
-  fontSize: "1.5em",
-}
+import DigitalHealthScore from "./components/DigitalHealthScore"
+import AvatarShop from "./components/AvatarShop"
 
 const altButtonStyle = {
   outline: "1px solid '#1d4ed8",
@@ -34,17 +28,20 @@ const altButtonStyle = {
 
 // adjust font on navbar
 
+
 function App( props ) {
   const { user, setUser } = useContext( UserContext )
-  const { history } = useContext( DigiHealthContext )
+  const { openModal, setOpenModal, history } = useContext( DigiHealthContext )
   return (
+
+
     <div className="App">
       <Router history={history}>
         <Switch>
           <Route exact path="/">
             {user.name === "isLoggedOut" ? <Redirect to="/login" /> : <Redirect to="/digitalhealthscore" />}</Route>
-          <Route exact path="/registration">
-            <RegistrationForm
+          <Route exact path="/signup">
+            <SignUpForm
               altpath={
                 <Link to="/login">
                   <button style={altButtonStyle}>
@@ -57,9 +54,9 @@ function App( props ) {
           <Route exact path="/login">
             <LoginForm
               altpath={
-                <Link to="/registration">
+                <Link to="/signup">
                   <button style={altButtonStyle}>
-                    Signup
+                    Sign Up
                   </button>
                 </Link>
               }
@@ -114,6 +111,26 @@ function App( props ) {
               </Link>
             } />
             <DigitalHealthScore />
+          </Route>
+          <Route exact path="/modal">
+            <Modal
+              altpath={
+                <Link to="/signup">
+                  <button style={altButtonStyle}>
+                    Get Started
+                  </button>
+                </Link>
+              } />
+          </Route>
+          <Route exact path="/digihealthshop">
+            <SideNavBar altpath={
+              <Link to="/login">
+                <button style={altButtonStyle}>
+                  Logout
+                </button>
+              </Link>
+            } />
+            <AvatarShop />
           </Route>
         </Switch>
       </Router>

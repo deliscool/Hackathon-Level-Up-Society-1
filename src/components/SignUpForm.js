@@ -4,7 +4,9 @@ import { Link } from "react-router-dom"
 import Header from "./Header"
 import "../Forms.css"
 
-function RegistrationForm( props ) {
+
+
+function SignUpForm( props ) {
     const { signUp, handleSubmit, handleChange } = useContext( DigiHealthContext )
     const [showPassword, setShowPassword] = useState( false )
 
@@ -14,17 +16,12 @@ function RegistrationForm( props ) {
                 <div className="form-container-wrapper">
                     <Header />
                     <div className="form-container">
-                        <form
-                            className="form"
-                            onSubmit={e => {
-                                console.log( "data was submitted" )
-                                handleSubmit( e )
-                            }}
-                        >
-                            <h2>Registration</h2>
-                            <label className="label-names" for="username">
-                                Name
-                            </label>
+                        <form className="form" onSubmit={e => {
+                            console.log( "data was submitted" )
+                            handleSubmit( e )
+                        }}>
+                            <h2>Sign Up</h2>
+                            <label className="label-names" for="username">Name</label>
                             <input
                                 type="text"
                                 name="name"
@@ -80,12 +77,10 @@ function RegistrationForm( props ) {
                                 I agree to the terms of service.
                             </label>
                             <div className="btn-container">
-                                <button type="submit">Signup</button>
+                                <button type="submit">Sign Up</button>
                                 {props.altpath}
                             </div>
-                            <Link to="/digitalhealthscore">
-                                <p>Continue as guest</p>
-                            </Link>
+                            <Link to="/digitalhealthscore"><p className="guest-login">Continue as guest</p></Link>
                         </form>
                     </div>
                 </div>
@@ -94,4 +89,4 @@ function RegistrationForm( props ) {
     )
 }
 
-export default RegistrationForm
+export default SignUpForm
