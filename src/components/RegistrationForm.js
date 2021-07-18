@@ -4,8 +4,6 @@ import { Link } from "react-router-dom"
 import Header from "./Header"
 import "../Forms.css"
 
-
-
 function RegistrationForm( props ) {
     const { signUp, handleSubmit, handleChange } = useContext( DigiHealthContext )
     const [showPassword, setShowPassword] = useState( false )
@@ -16,12 +14,17 @@ function RegistrationForm( props ) {
                 <div className="form-container-wrapper">
                     <Header />
                     <div className="form-container">
-                        <form className="form" onSubmit={e => {
-                            console.log( "data was submitted" )
-                            handleSubmit( e )
-                        }}>
+                        <form
+                            className="form"
+                            onSubmit={e => {
+                                console.log( "data was submitted" )
+                                handleSubmit( e )
+                            }}
+                        >
                             <h2>Registration</h2>
-                            <label className="label-names" for="username">Name</label>
+                            <label className="label-names" for="username">
+                                Name
+                            </label>
                             <input
                                 type="text"
                                 name="name"
@@ -29,7 +32,9 @@ function RegistrationForm( props ) {
                                 placeholder={"Input name"}
                                 onChange={handleChange}
                             />
-                            <label className="label-names" for="email">Email</label>
+                            <label className="label-names" for="email">
+                                Email
+                            </label>
                             <input
                                 type="email"
                                 name="email"
@@ -37,7 +42,29 @@ function RegistrationForm( props ) {
                                 placeholder="Input email"
                                 onChange={handleChange}
                             />
-                            <label style={{ width: "100%", display: "flex", justifyContent: "space-between" }} className="label- names" for="password">Password <span style={{ marginLeft: "16px", color: "green", textAlign: "right" }} onClick={() => setShowPassword( !showPassword )}>{showPassword ? "Hide" : "Show"}</span></label>
+                            <label
+                                style={{
+                                    width: "100%",
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                }}
+                                className="label- names"
+                                for="password"
+                            >
+                                Password{" "}
+                                <span
+                                    style={{
+                                        marginLeft: "16px",
+                                        color: "green",
+                                        textAlign: "right",
+                                    }}
+                                    onClick={() =>
+                                        setShowPassword( !showPassword )
+                                    }
+                                >
+                                    {showPassword ? "Hide" : "Show"}
+                                </span>
+                            </label>
                             <input
                                 type={showPassword ? "text" : "password"}
                                 name="password"
@@ -49,18 +76,21 @@ function RegistrationForm( props ) {
                                 <input
                                     type="checkbox"
                                     name="remember password"
-                                />I agree to the terms of service.
+                                />
+                                I agree to the terms of service.
                             </label>
                             <div className="btn-container">
-                                <button type="submit">Register</button>
+                                <button type="submit">Signup</button>
                                 {props.altpath}
                             </div>
-                            <Link to="/digitalhealthscore"><p>Continue as guest</p></Link>
+                            <Link to="/digitalhealthscore">
+                                <p>Continue as guest</p>
+                            </Link>
                         </form>
                     </div>
                 </div>
             </div>
-        </main >
+        </main>
     )
 }
 

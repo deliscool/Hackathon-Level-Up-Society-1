@@ -6,6 +6,8 @@
 
 body {
 	font-family: "Inter", sans-serif;
+	max-height: 100vh;
+
 	display: flex;
 	flex-direction: row;
 	background: linear-gradient(180deg, #1d4ed8 -27.02%, #ffffff 149.49%);
@@ -48,96 +50,6 @@ p {
 	font-weight: 300;
 }
 
-/* SideNavBar Styling */
-
-.sideNavBar {
-	min-width: 312px;
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	background: linear-gradient(180deg, #1d4ed8 -27.02%, #ffffff 149.49%);
-}
-
-.digihealth {
-	margin-top: 3vh;
-	align-self: center;
-	color: white;
-}
-
-.greetingBox {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
-	height: 10vh;
-	width: 100%;
-	margin-top: 7.5vh;
-}
-
-.greetingBox h4,
-h3 {
-	margin: 0 0 0 24px;
-}
-
-.greetingBox h4 {
-	font-size: 20px;
-	line-height: 28px;
-	font-weight: 300;
-}
-
-.greetingBox h3 {
-	font-size: 34px;
-	line-height: 40px;
-	font-weight: 600;
-}
-
-.statsContainer {
-	display: flex;
-	flex-direction: column;
-	margin-top: 8vh;
-	height: fit-content;
-	width: 100%;
-	padding: auto 24px;
-}
-
-.statsRow {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 80%;
-	padding: auto 16px;
-	margin: 8px auto 8px 24px;
-}
-
-.statsRow h5 {
-	font-size: 18px;
-}
-
-.largeButton {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	padding: 14px 20px;
-	position: absolute;
-	width: 264px;
-	height: 48px;
-	left: 24px;
-	bottom: 17vh;
-	/* Primary/Blue 500 */
-	background: #1d4ed8;
-	border-radius: 5px;
-	color: white;
-}
-
-.about {
-	position: absolute;
-	bottom: 16px;
-	left: 23px;
-}
-
-/* SideNavBar Styling */
-
 /* Main Content Container */
 main {
 	width: 100%;
@@ -152,4 +64,10 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.tippy-box[data-theme~="digihealth"] {
+	background-color: #f8fafc;
+	color: #000000;
+	border: 1px solid #000000;
 }

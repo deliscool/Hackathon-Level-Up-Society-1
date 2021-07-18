@@ -1,8 +1,12 @@
 import React, { useState, useContext, useEffect } from "react"
 import Goals from "./components/Goals/Goals"
-import SideNavBar from "./components/SideNavBar"
+import SideNavBar from "./components/SideNavBar/SideNavBar"
 import LoginForm from "./components/LoginForm"
 import RegistrationForm from "./components/RegistrationForm"
+import AvatarStore from "./components/AvatarStore/AvatarStore"
+import About from "./components/About/About"
+import Configure from "./components/Configure/Configure"
+
 import {
   BrowserRouter as Router,
   Link,
@@ -13,6 +17,7 @@ import {
 } from "react-router-dom"
 import { UserContext } from "./context/UserContext"
 import DigitalHealthScore from "./components/DigitalHealthScore "
+import { DigiHealthContext } from "./context/ContextProvider"
 
 const linkStyle = {
   textDecoration: "none",
@@ -27,14 +32,14 @@ const altButtonStyle = {
   color: "#1d4ed8",
 }
 
-// todo Change register labels to "Signup"
 // adjust font on navbar
 
-function App() {
+function App( props ) {
   const { user, setUser } = useContext( UserContext )
+  const { history } = useContext( DigiHealthContext )
   return (
     <div className="App">
-      <Router>
+      <Router history={history}>
         <Switch>
           <Route exact path="/">
             {user.name === "isLoggedOut" ? <Redirect to="/login" /> : <Redirect to="/digitalhealthscore" />}</Route>
@@ -54,11 +59,41 @@ function App() {
               altpath={
                 <Link to="/registration">
                   <button style={altButtonStyle}>
-                    Register
+                    Signup
                   </button>
                 </Link>
               }
             />
+          </Route>
+          <Route exact path="/configure">
+            <SideNavBar altpath={
+              <Link to="/login">
+                <button style={altButtonStyle}>
+                  Logout
+                </button>
+              </Link>
+            } />
+            <Configure />
+          </Route>
+          <Route exact path="/about">
+            <SideNavBar altpath={
+              <Link to="/login">
+                <button style={altButtonStyle}>
+                  Logout
+                </button>
+              </Link>
+            } />
+            <About />
+          </Route>
+          <Route exact path="/avatarstore">
+            <SideNavBar altpath={
+              <Link to="/login">
+                <button style={altButtonStyle}>
+                  Logout
+                </button>
+              </Link>
+            } />
+            <AvatarStore />
           </Route>
           <Route exact path="/goals">
             <SideNavBar altpath={
@@ -73,7 +108,7 @@ function App() {
           <Route exact path="/digitalhealthscore">
             <SideNavBar altpath={
               <Link to="/login">
-                <button style={altButtonStyle}>
+                <button className="smallButton">
                   Logout
                 </button>
               </Link>
