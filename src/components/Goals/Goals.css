@@ -64,6 +64,7 @@ input:checked + .slider:before {
 	align-items: center;
 	margin: 10vh auto 10vh 7vw;
 	width: 60vw;
+	z-index: 5;
 	/* background-color: pink; */
 }
 
