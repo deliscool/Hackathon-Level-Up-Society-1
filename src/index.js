@@ -7,11 +7,11 @@ import './index.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <DigiHealthContextProvider>
-      <UserContextProvider>
+    <UserContextProvider>
+      <DigiHealthContextProvider>
         <App />
-      </UserContextProvider>
-    </DigiHealthContextProvider>
+      </DigiHealthContextProvider>
+    </UserContextProvider>
   </React.StrictMode>,
   document.getElementById( 'root' )
 );

@@ -6,7 +6,7 @@ const users = [
         totalSitesPerDay: 17,
         totalDigitalIds: 9,
         mostTimeSpent: "StackOverflow",
-        moneySpent: 240,
+        moneySpent: "Amazon",
         goals: {
             socialMedia: 45,
             productivity: 45,
@@ -21,7 +21,7 @@ const users = [
         totalSitesPerDay: 15,
         totalDigitalIds: 12,
         mostTimeSpent: "Instagram",
-        moneySpent: 140,
+        moneySpent: "ASOS",
         goals: {
             socialMedia: 35,
             productivity: 55,
@@ -36,7 +36,7 @@ const users = [
         totalSitesPerDay: 3,
         totalDigitalIds: 5,
         mostTimeSpent: "Netflix",
-        moneySpent: 6,
+        moneySpent: "Currys",
         goals: {
             socialMedia: 10,
             productivity: 10,
@@ -52,7 +52,7 @@ const users = [
         totalSitesPerDay: 17,
         totalDigitalIds: 9,
         mostTimeSpent: "StackOverflow",
-        moneySpent: 240,
+        moneySpent: "eBay",
         goals: {
             socialMedia: 45,
             productivity: 45,

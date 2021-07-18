@@ -29,7 +29,9 @@ function SignUpForm( props ) {
                                 placeholder={"Input name"}
                                 onChange={handleChange}
                             />
-                            <label className="label-names" for="email">Email</label>
+                            <label className="label-names" for="email">
+                                Email
+                            </label>
                             <input
                                 type="email"
                                 name="email"
@@ -37,7 +39,29 @@ function SignUpForm( props ) {
                                 placeholder="Input email"
                                 onChange={handleChange}
                             />
-                            <label style={{ width: "100%", display: "flex", justifyContent: "space-between" }} className="label- names" for="password">Password <span style={{ marginLeft: "16px", color: "green", textAlign: "right" }} onClick={() => setShowPassword( !showPassword )}>{showPassword ? "Hide" : "Show"}</span></label>
+                            <label
+                                style={{
+                                    width: "100%",
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                }}
+                                className="label- names"
+                                for="password"
+                            >
+                                Password{" "}
+                                <span
+                                    style={{
+                                        marginLeft: "16px",
+                                        color: "green",
+                                        textAlign: "right",
+                                    }}
+                                    onClick={() =>
+                                        setShowPassword( !showPassword )
+                                    }
+                                >
+                                    {showPassword ? "Hide" : "Show"}
+                                </span>
+                            </label>
                             <input
                                 type={showPassword ? "text" : "password"}
                                 name="password"
@@ -49,7 +73,8 @@ function SignUpForm( props ) {
                                 <input
                                     type="checkbox"
                                     name="remember password"
-                                />I agree to the terms of service.
+                                />
+                                I agree to the terms of service.
                             </label>
                             <div className="btn-container">
                                 <button type="submit">Sign Up</button>
@@ -60,7 +85,7 @@ function SignUpForm( props ) {
                     </div>
                 </div>
             </div>
-        </main >
+        </main>
     )
 }
 
